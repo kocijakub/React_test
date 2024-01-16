@@ -48,6 +48,7 @@ h1{
     gap: 10px;
 }
 .cardButton{
+    font-size: 18px;
     padding: 10px 15px;
     border-radius: 10px;
     background-color: #299764;
@@ -66,9 +67,12 @@ h1{
 .ingr p{
     margin: 0;
 }
-#time{
+.icons p{
     font-weight: bold;
 }
 #vegan{
     color: #299764;
+}
+#diff{
+    color: #f8b600;
 }

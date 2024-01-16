@@ -4,13 +4,6 @@ import {Stickman} from "./Icons/Stickman.jsx";
 import {ArrowU} from "./Icons/ArrowU.jsx";
 
 export function Card(name,time,ingr,diff,vegan,id,img,descr){
-    function IsVegan(){
-        if (vegan){
-            return 'vegan'
-        }else{
-            return 'non vegan'
-        }
-    }
     let ingrs = ingr.map(item =>{
         return <p>{item}</p>
     })
@@ -22,9 +15,9 @@ export function Card(name,time,ingr,diff,vegan,id,img,descr){
                 </div>
                 <div className={'cardR'}>
                     <h2>{name}</h2>
-                    <div>
+                    <div className={'icons'}>
                         <p id={'time'}><Clock/>{time}min</p>
-                        <p id={'vegam'}><Leaf/>{IsVegan}</p>
+                        <p id={'vegan'}><Leaf/>{vegan?'Vegan':'Non vegan'}</p>
                         <p id={'diff'}><Stickman/>{diff}</p>
                     </div>
                 </div>

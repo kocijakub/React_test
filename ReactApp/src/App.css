@@ -1,0 +1,74 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+.icon{
+    width: 30px;
+}
+.cards{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card{
+    border: #299764 2px solid;
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
+    align-items: center;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.cardMain{
+    width: 800px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+    gap: 300px;
+}
+.cardR{
+    display: flex;
+    flex-direction: column;
+}
+.cardR div{
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+}
+.cardR p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cardButton{
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #299764;
+    color: white;
+    border-color: #299764;
+
+}
+.descr{
+    width: 300px;
+}
+.ingr{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.ingr p{
+    margin: 0;
+}
+#time{
+    font-weight: bold;
+}
+#vegan{
+    color: #299764;
+}

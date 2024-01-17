@@ -1,12 +1,18 @@
+import { useState } from 'react';
 import {Clock} from "./Icons/Clock.jsx";
 import {Leaf} from "./Icons/Leaf.jsx";
 import {Stickman} from "./Icons/Stickman.jsx";
 import {ArrowU} from "./Icons/ArrowU.jsx";
 
-export function Card(name,time,ingr,diff,vegan,id,img,descr){
-    let ingrs = ingr.map(item =>{
+    export function Card(name,time,ingr,diff,vegan,id,img,descr){
+        let ingrs = ingr.map(item =>{
         return <p>{item}</p>
-    })
+        })
+        const [showDiv, setShowDiv] = useState('none');
+        let change = true
+        function Button() {
+            setShowDiv((prevShowDiv) => (prevShowDiv === 'none' ? 'flex' : 'none'));
+        }
     return(
         <div className={'card'}>
             <div className={'cardMain'}>
@@ -21,9 +27,9 @@ export function Card(name,time,ingr,diff,vegan,id,img,descr){
                         <p id={'diff'}><Stickman/>{diff}</p>
                     </div>
                 </div>
-                <button className={'cardButton'}>Zobrazit ingredience {ArrowU}</button>
+                <button onClick={Button} className={'cardButton'}>Zobrazit ingredience {ArrowU}</button>
             </div>
-            <div className={'cardInfo'}>
+            <div style = {{display: showDiv}} className={'cardInfo'}>
                 <p className={'descr'}>{descr}</p>
                 <p className={'ingr'}>{ingrs}</p>
             </div>

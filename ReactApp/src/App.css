@@ -12,24 +12,26 @@ h1{
     gap: 20px;
 }
 .card{
+    transition: all 1s;
     border: #299764 2px solid;
     padding: 20px;
     border-radius: 15px;
     margin: auto;
     align-items: center;
-    width: 800px;
+    justify-content: space-between;
+    width: 850px;
     display: flex;
     flex-direction: column;
 }
 .cardMain{
-    width: 800px;
+    width: inherit;
     gap: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .cardInfo{
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 300px;
 }

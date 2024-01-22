@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import {Header} from "./Components/Header.jsx";
-import {CardList} from "./Components/CardList.jsx";
+import {Header} from "./Components/Test-Recepty/Header.jsx";
+import {CardList} from "./Components/Test-Recepty/CardList.jsx";
+import {Cards} from "./Components/Ukol-Movies/Cards.jsx";
 import './App.css'
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
 
   return (
     <>
-      <Header/>
-        <CardList/>
+        <Cards/>
     </>
   )
 }

@@ -1,80 +1,37 @@
-h1{
-    text-align: center;
-    font-size: 60px;
-}
-.icon{
-    width: 30px;
-}
 .cards{
     margin: auto;
+    width: 500px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 .card{
-    transition: all 1s;
-    border: #299764 2px solid;
-    padding: 20px;
-    border-radius: 15px;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-    width: 850px;
-    display: flex;
-    flex-direction: column;
-}
-.cardMain{
-    width: inherit;
-    gap: 30px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.cardInfo{
-    display: none;
-    justify-content: space-between;
-    gap: 300px;
-}
-.cardR{
-    display: flex;
-    flex-direction: column;
-}
-.cardR div{
+.card-info{
     display: flex;
     justify-content: left;
-    gap: 40px;
+    gap: 20px;
 }
-.cardR p{
+button{
+    background-color: white;
+    border: none;
+}
+.star{
+    width: 20px;
+}
+.stars{
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
-.cardButton{
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-color: #299764;
-    color: white;
-    border-color: #299764;
-
+.img{
+    width: 100px;
 }
-.descr{
-    width: 300px;
-}
-.ingr{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.ingr p{
-    margin: 0;
-}
-.icons p{
-    font-weight: bold;
-}
-#vegan{
-    color: #299764;
-}
-#diff{
-    color: #f8b600;
+.checkbox{
+    display: none;
 }

@@ -4,15 +4,24 @@ import { useState } from "react";
 
 export function Card(img, name, creator, starNum) {
 
-    let stars =[]
-    for (let i = 0; i < 5; i++) {
-        let [checked,change] = useState(false)
-        let star = <label>
-            <input className={'checkbox'} type="checkbox" onChange={() =>{ change(!checked)}}/>
-            {checked ? <StarFull/>:<StarBlank/>}
+    const [checkedStars, setCheckedStars] = useState([false, false, false, false, false]);
+
+    const handleStarClick = (index) => {
+        const newCheckedStars = checkedStars.map((_, i) => (i <= index));
+        setCheckedStars(newCheckedStars);
+    };
+
+    const stars = checkedStars.map((isChecked, index) => (
+        <label key={index}>
+            <input
+                className={'checkbox'}
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => handleStarClick(index)}
+            />
+            {isChecked ? <StarFull /> : <StarBlank />}
         </label>
-        stars.push(star)
-    }
+    ));
 
     return (
         <div className={'card'}>
